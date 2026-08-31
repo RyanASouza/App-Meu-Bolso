@@ -8,7 +8,7 @@ export const COLORS ={
     border: '#dcdde1',
     success: '#2ed573',
     danger: '#ff4757',
-}
+};
 
 export const SPACING = { sm: 8, md: 16, lg: 24, xl:32 };
 export const RADIUS = { sm:8, md: 12, lg: 16 };
