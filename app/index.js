@@ -1,8 +1,15 @@
-import { Text, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, Text, View } from 'react-native';
+import AppButton from '../src/components/AppBottom';
 import AppInput from '../src/components/AppInput';
 
 export default function Login() {
-    return
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false); 
+
+    return (
+    <KeyboardAvoidingView style={styles.container}
+    behavior={Platform.OS==='ios'?'padding':undefined}>
     <View>
         <Text> Meu Bolso </Text>
         <Text> Controle suas finanças </Text>
@@ -11,7 +18,11 @@ export default function Login() {
         autoCapitalize="none" keyboardType="email-adress"/>
 
         <AppInput label="Senha" secureTextEntry placeholder="Digite sua Senha" />
+
+        <AppButton title="Entrar" />
     </View>
+    </KeyboardAvoidingView>
+    );
 }
 
 const styles = StyleSheet.create({
