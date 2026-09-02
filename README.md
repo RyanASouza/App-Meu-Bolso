@@ -1,50 +1,188 @@
-# Welcome to your Expo app 👋
+# 💰 Meu Bolso
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido para auxiliar no **gerenciamento e organização das finanças pessoais**, permitindo ao usuário acompanhar sua vida financeira de forma prática e intuitiva.
 
-## Get started
+> 🚧 **Status:** Em desenvolvimento
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📱 Sobre o projeto
 
-2. Start the app
+O **Meu Bolso** é um projeto de aplicativo mobile voltado para o controle financeiro pessoal.
 
-   ```bash
-   npx expo start
-   ```
+A proposta é desenvolver uma aplicação que ofereça uma experiência simples e organizada para que o usuário possa acompanhar suas informações financeiras e tomar decisões com maior controle sobre seu dinheiro.
 
-In the output, you'll find options to open the app in a
+O projeto está sendo desenvolvido de forma incremental, portanto novas funcionalidades e melhorias serão adicionadas ao longo do desenvolvimento.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🎯 Objetivo
 
-## Get a fresh project
+O principal objetivo do projeto é desenvolver uma aplicação mobile capaz de facilitar o **controle e a organização das finanças pessoais**, centralizando informações financeiras em uma interface acessível e intuitiva.
 
-When you're ready, run:
+Além do desenvolvimento da aplicação em si, o projeto também tem como objetivo aplicar conceitos de:
 
-```bash
-npm run reset-project
+* Desenvolvimento mobile;
+* React Native;
+* Componentização;
+* Navegação entre telas;
+* TypeScript;
+* Organização e reutilização de código;
+* Versionamento com Git e GitHub;
+* Desenvolvimento de interfaces para dispositivos móveis.
+
+---
+
+## ✨ Funcionalidades
+
+### Atualmente
+
+* [x] Estrutura inicial do aplicativo
+* [x] Configuração do ambiente Expo
+* [x] Navegação baseada em arquivos com Expo Router
+* [ ] Cadastro de usuário
+* [ ] Controle de receitas
+* [ ] Controle de despesas
+* [ ] Categorias financeiras
+* [ ] Visualização do saldo
+* [ ] Histórico de movimentações
+* [ ] Resumo financeiro
+* [ ] Melhorias de interface e experiência do usuário
+
+> A lista será atualizada conforme novas funcionalidades forem implementadas.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+| Tecnologia                  | Utilização                                  |
+| --------------------------- | ------------------------------------------- |
+| **React Native**            | Desenvolvimento da aplicação mobile         |
+| **Expo**                    | Ambiente e ferramentas para desenvolvimento |
+| **Expo Router**             | Gerenciamento da navegação                  |
+| **TypeScript**              | Tipagem e desenvolvimento do projeto        |
+| **React**                   | Construção da interface da aplicação        |
+| **React Navigation**        | Recursos de navegação                       |
+| **React Native Reanimated** | Animações e interações                      |
+| **Git**                     | Controle de versão                          |
+| **GitHub**                  | Hospedagem e gerenciamento do código        |
+
+---
+
+## 📂 Estrutura do projeto
+
+```text
+App-Meu-Bolso/
+│
+├── app/                 # Telas e rotas da aplicação
+│
+├── assets/
+│   └── images/          # Imagens e recursos visuais
+│
+├── components/          # Componentes reutilizáveis
+│
+├── constants/           # Constantes utilizadas no projeto
+│
+├── hooks/               # Hooks personalizados
+│
+├── scripts/             # Scripts auxiliares
+│
+├── src/                 # Código-fonte adicional da aplicação
+│
+├── app.json             # Configurações do Expo
+├── package.json         # Dependências e scripts do projeto
+├── tsconfig.json        # Configurações do TypeScript
+├── eslint.config.js     # Configurações do ESLint
+└── README.md            # Documentação do projeto
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+> A estrutura poderá ser modificada conforme o projeto evoluir.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Como executar o projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Pré-requisitos
 
-## Join the community
+Antes de iniciar, é necessário ter instalado:
 
-Join our community of developers creating universal apps.
+* **Node.js**
+* **npm**
+* **Expo**
+* Um dispositivo físico com **Expo Go** ou um emulador Android/iOS configurado.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/RyanASouza/App-Meu-Bolso.git
+```
+
+### 2. Acesse a pasta
+
+```bash
+cd App-Meu-Bolso
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Inicie o projeto
+
+```bash
+npx expo start
+```
+
+Depois disso, o Expo disponibilizará as opções para executar a aplicação em um dispositivo físico ou emulador.
+
+---
+
+## 📸 Demonstração
+
+As imagens e capturas de tela da aplicação serão adicionadas conforme as principais telas forem finalizadas.
+
+<!--
+Exemplo:
+
+![Tela inicial](assets/images/tela-inicial.png)
+-->
+
+---
+
+## 🗺️ Próximos passos
+
+O desenvolvimento do projeto seguirá de forma incremental. Entre os próximos objetivos estão:
+
+* [ ] Finalizar as principais telas;
+* [ ] Implementar o fluxo de cadastro e acesso;
+* [ ] Desenvolver o gerenciamento de receitas e despesas;
+* [ ] Implementar categorias;
+* [ ] Desenvolver o histórico financeiro;
+* [ ] Implementar o resumo das informações financeiras;
+* [ ] Melhorar a experiência de navegação;
+* [ ] Realizar testes e correções;
+* [ ] Preparar uma versão mais completa da aplicação.
+
+---
+
+## 📌 Status do desenvolvimento
+
+O **Meu Bolso** encontra-se em fase de desenvolvimento.
+
+Novas funcionalidades, correções e melhorias serão adicionadas ao projeto ao longo do processo de desenvolvimento.
+
+---
+
+## 👨‍💻 Autor
+
+**Ryan Souza** 
+
+Projeto desenvolvido com suporte de um professor, para fins acadêmicos e de aprendizado em desenvolvimento de aplicações mobile.
+
+---
+
+## 📄 Licença
+
+Este projeto está em desenvolvimento e, no momento, não possui uma licença de software definida.
