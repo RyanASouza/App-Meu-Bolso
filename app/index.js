@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AppButton from '../src/components/AppBottom';
 import AppInput from '../src/components/AppInput';
@@ -21,7 +22,9 @@ export default function Login() {
 
         <AppButton title="Entrar" />
 
-        <TouchableOpacity> <Text style={styles.link}> Criar nova conta </Text> </TouchableOpacity>
+        <TouchableOpacity style={styles.linkButton} activeOpacity={0.75}>
+            <Text style={styles.link}>Criar nova conta</Text>
+        </TouchableOpacity>
     </View>
     </KeyboardAvoidingView>
     );
@@ -46,10 +49,18 @@ const styles = StyleSheet.create({
         marginTop: 8,
         marginBottom: 32
     },
+    linkButton: {
+        minHeight: 48,
+        borderWidth: 1,
+        borderColor: '#008f72',
+        borderRadius: 12,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 12,
+    },
     link: {
         color:'#008f72',
         textAlign: 'center',
-        marginTop: 20,
         fontWeight: '700'
     }
 })

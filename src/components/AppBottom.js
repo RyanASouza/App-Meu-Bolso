@@ -2,18 +2,19 @@ import { ActivityIndicator, StyleSheet, Text, TouchableOpacity } from "react-nat
 import { COLORS, RADIUS, SPACING } from '../constants/theme';
 
 export default function AppButton(
-    { title, onPress, loading=false, disabled=false }
+    { title, onPress, loading = false, disabled = false, style, textStyle }
 ) {
     return(
         <TouchableOpacity 
-        style={StyleSheet.button, (disabled || loading)
-        && StyleSheet.disabled}
+        style={[styles.button, (disabled || loading) && styles.disabled, style]}
         onPress={onPress}
         disabled={disabled || loading}
+        activeOpacity={0.84}
+        accessibilityRole="button"
         >
         {loading ?
           <ActivityIndicator color="#fff" /> :
-          <Text style={StyleSheet.text}>{title}</Text>
+          <Text style={[styles.text, textStyle]}>{title}</Text>
         }
         </TouchableOpacity>
     );
@@ -23,18 +24,27 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: COLORS.primary,
         borderRadius: RADIUS.md,
-        padding: SPACING.md,
-        alignItems: 'center'
+        minHeight: 52,
+        paddingHorizontal: SPACING.lg,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowColor: COLORS.primaryDark,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.22,
+        shadowRadius: 8,
+        elevation: 3,
     },
 
     disabled: {
-        opacity: .6
+        opacity: .6,
+        elevation: 0,
     },
 
     text: {
         color: '#fff',
         fontSize: 16,
-        fontWeight: '700'
+        fontWeight: '700',
+        letterSpacing: 0.2,
     }
 
 })
