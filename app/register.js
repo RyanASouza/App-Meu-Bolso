@@ -2,11 +2,39 @@ import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AppButton from '../src/components/AppBottom';
 import AppInput from '../src/components/AppInput';
+import { signUp } from '../src/services/authService';
 
 export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false); 
+
+    async function handleRegister() {
+        if(!email.trim()||!password.trim()||!confirm.trim())
+            return Alert.alert('Atenção, preencha todos os campos'),
+            console.log('Preencha todos os campos!');
+        if(password.length < 8)
+            return Alert.alert('Ateção' , 'A senha deve ter no mínimo 8 caracteres')
+        if(password!==confirm)
+            return Alert.alert('Atenção','As senhas não conferem');    
+
+        try{
+            setLoading(true);
+            const {error} = await signUp(email.trim(), password.trim());
+            if(error){
+                Alert.alert('Erro no cadastro', error.message);
+                console.log('Erro no cadastro', error.message);
+                return;
+            }
+            else {
+                Alert.alert('Sucesso',
+                    'Conta criada com sucesso, Faça login para continuar.'),
+                    router.replace('/');
+            }
+        }finally{
+            setLoading(false)
+        }
+    }
 
     return (
         <KeyboardAvoidingView style={styles.container}
@@ -22,7 +50,7 @@ export default function Register() {
 
               <AppInput label="Senha" secureTextEntry placeholder="Confirme sua Senha" />
 
-             <AppButton title="Criar conta" />
+             <AppButton title="Criar conta" loading={loading} onPress={handleRegister}/>
 
              <TouchableOpacity style={styles.linkButton} activeOpacity={0.75}>
                 <Text style={styles.link}>Fazer login</Text>
