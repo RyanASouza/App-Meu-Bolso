@@ -36,7 +36,7 @@ const CustomStorage = {
   },
 };
 
-const url = 'https://uyyrzwtpehsztudvdnxy.supabase.com';
+const url = 'https://uyyrzwtpehsztudvdnxy.supabase.co';
 const key = 'sb_publishable_9_hpM-KIR-T0snwu3JKvuA_ccsZ9Y9I';
 
 export const supabase = createClient(url, key, {

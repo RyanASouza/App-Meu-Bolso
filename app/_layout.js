@@ -1,10 +1,11 @@
-import { Stack } from 'expo-router';
+﻿import { Stack } from 'expo-router';
 
 export default function RootLayout() {
-	return (
-	<Stack>
-		<Stack.Screen name="index" options={{headerShown:false}} />
-		<Stack.Screen name="register" options={{title:'Criar Conta'}} />
-	</Stack>
-	);
+    return (
+        <Stack>
+            <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="register" options={{ title: 'Criar Conta' }} />
+            <Stack.Screen name="(app)/home" options={{ headerShown: false }} />
+        </Stack>
+    );
 }
