@@ -4,3 +4,11 @@ export function formatCurrency(value) {
         currency: 'BRL',
     });
 }
+
+export function parseCurrency(value) {
+    return Number(String(value).replace(',','.'));
+}
+
+export function formatDate(value) {
+    return value ? new Date(value).toLocaleDateString('pt-BR') : '';
+}
